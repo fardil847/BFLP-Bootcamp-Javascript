@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <title>Latihan Bootstrap</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#product">PRODUCT</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#galery">GALERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">BLOG</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#inventory"> MY INVENTORY</a>
+                      </li>
+                  </ul>
+            </nav>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+                <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <img src="gambar.jpg" class="rounded-circle" alt="gambar">
+                      </div>
+
+
+                      <div class="col">
+                        <h4 id="inputNama">Farah Dila Anastasia</h4>
+                                    <p class="text-secondary mb-1" id="inputRole">Full Stack Developer</p>
+                                    <button class="btn btn-primary">Kontak</button>
+                                    <button class="btn btn-outline-primary">Resume</button>
+                      </div>
+
+        
+                      <div class="col">
+                        <table class="table table-borderless border-left table-sm" >
+                            <thead>
+                              <tr>
+                                <th scope="col">Availability</th>
+                                <th scope="col" id="inputAvailability">Full Time</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" >Usia</th>
+                                <td id="inputAge">17</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" >Lokasi</th>
+                                <td id="inputLokasi">Bogor</td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row" >Pengalaman</th>
+                                <td id="inputExperience">2</td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row" >Email</th>
+                                <td id="inputEmail">developer@gmail.com</td>
+                               
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="card-body">
+                <form id="profile-form">
+                    <div class="mb-3">
+                      <label for="namaProfile" class="form-label">Nama</label>
+                      <input type="text" class="form-control" id="e" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="roleProfile" cnamaProfillass="form-label">Role</label>
+                        <input type="text" class="form-control" id="roleProfile" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="availabilityProfile" class="form-label">Availability</label>
+                        <input type="text" class="form-control" id="availabilityProfile" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="ageProfile" class="form-label">Age</label>
+                        <input type="number" class="form-control" id="ageProfile" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="lokasiProfile" class="form-label">Lokasi</label>
+                        <input type="text" class="form-control" id="lokasiProfile" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="experienceProfile" class="form-label">Experience</label>
+                        <input type="number" class="form-control" id="experienceProfile" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="emailProfile" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="emailProfile" required>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="card-footer"></div>
+          </div>
+
+          <script>
+
+            let userProfile ={
+              nama: 'Farah Dila Anastasia',
+              role: 'Full Stack Developer',
+              availability: 'Fultime',
+              age: 17,
+              location: 'Bogor',
+              experience: 2,
+              email: 'developer@gmail.com',
+            }; 
+
+
+            function getDataProfil(){
+              let nama = document.getElementById("namaProfile").value;
+              let role = document.getElementById("roleProfile").value;
+              let availability = document.getElementById("availabilityProfile").value;
+              let age = document.getElementById("ageProfile").value;
+              let lokasi = document.getElementById("lokasiProfile").value;
+              let experience = document.getElementById("experienceProfile").value;
+              let email = document.getElementById("emailProfile").value;
+             
+              document.getElementById("inputNama").innerHTML =nama;
+              document.getElementById("inputRole").innerHTML= role;
+              document.getElementById("inputAvailability").innerHTML = availability;
+              document.getElementById("inputAge").innerHTML=age;
+              document.getElementById("inputLokasi").innerHTML=lokasi;
+              document.getElementById("inputExperience").innerHTML=experience;
+              document.getElementById("inputEmail").innerHTML=email;
+              console.log(nama, role, availability, age, lokasi, experience, email);
+            }
+            const form = document.getElementById("profile-form");
+            form.addEventListener("submit", (event) => {
+              event.preventDefault();
+              getDataProfil()
+            });
+
+              
+
+
+
+
+
+
+
+
+
+
+
+         
+
+
+
+
+            
+            
+          </script>
+       
+
+    </body>
+</html>

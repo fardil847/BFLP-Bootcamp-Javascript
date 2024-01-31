@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Latihan JavaScript</title>
+    </head>
+
+    <body>
+        <!-- Penjumlahan -->
+        <!-- <h2>Penjumlahan dua bilangan</h2>
+        
+        <label1 for="num1">Bilangan 1: </label1>
+        <input type="number" id="num1" placeholder="Masukan bilangan pertama ">
+        <label2 for="num2">Bilangan 2: </label2>
+        <input type="number" id="num2" placeholder="Masukan bilangan kedua ">
+
+        <button onclick1="tambah()">Hitung Jumlah</button>
+
+        <p id="result1"></p>
+
+        <script>
+            function tambah(){
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+
+                var hasil1 = num1+num2
+
+                document.getElementById("result").innerHTML = "Hasil Penjumlahan: " + hasil1;
+            }
+        </script> -->
+
+        <!-- Pembagian -->
+        <h2>Pembagian dua bilangan</h2>
+        
+        <label1 for="num1">Bilangan 1: </label1>
+        <input type="number" id="num1" placeholder="Masukan bilangan pertama ">
+        <label2 for="num2">Bilangan 2: </label2>
+        <input type="number" id="num2" placeholder="Masukan bilangan kedua ">
+
+        <button onclick="bagi()" type="button">Hitung</button>
+
+        <p id="result"></p>
+
+        <script>
+            function bagi(){
+                var num1 = parseInt(document.getElementById("num1").value);
+                var num2 = parseInt(document.getElementById("num2").value);
+
+                if (num2!==0){
+                    var hasil2 = num2/num1;
+                    document.getElementById("result").innerHTML = "Hasil Pembagian: " + hasil2;
+                }else{
+                    document.getElementById("result").innerHTML = "Bilangan tidak boleh 0 ";
+                }
+            }
+        </script>
+
+    </body>
+
+</html>

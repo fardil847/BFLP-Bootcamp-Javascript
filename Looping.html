@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Latihan Javascript</title>
+</head>
+<body>
+
+<script>
+
+// let n = 6;
+// let string = "";
+// for (let i = 1; i <= n; i++) {
+//   // printing spaces
+//   for (let j = 0; j < n - i; j++) {
+//     string += " ";
+//   }
+//   // printing star
+//   for (let k = 0; k < i; k++) {
+//     string += "*";
+//   }
+//   string += "\n";
+// }
+// console.log(string);
+
+
+// let n =21;
+// let string = "";
+// for (let i = 1; i <= n; i++) {
+//   // printing spaces
+//   for (let j = 0; j < n - i; j++) {
+//     string += " ";
+//   }
+//   // printing star
+//   for (let k = 1; k <= i; k++) {
+//     if(i%2==0){
+//       if(k%2){
+//       string+="#";
+//     }else
+//     string += "*";
+//     }else{
+//       if(k%2){
+//       string+="*";
+//     }else
+//     string += "#";
+//     }
+//   }
+//   string += "\n";
+// }
+// console.log(string);
+
+
+
+// let n = 5;
+// let string = "";
+
+// for (let i = 1; i <= n; i++) {
+
+//   for (let j = 1; j <= n - i; j++) {
+//     string += " ";
+//   }
+//   for (let k = 1; k <= 2 * i - 1; k++) {
+//     string += "*";
+//   }
+//   string += "\n";
+// }
+// console.log(string);
+
+
+// 12
+// 17
+// 19
+// 24
+// 26
+// 30
+// 81
+
+
+// var umur = [30, 12, 24, 26, 19, 17, 81];
+// var n = umur.length;
+
+// for (var i = 0; i < n - 1; i++) {
+//   for (var j = 0; j < n - i - 1; j++) {
+//     if (umur[j] > umur[j + 1]) {
+      
+//       var temp = umur[j];
+//       umur[j] = umur[j + 1];
+//       umur[j + 1] = temp;
+//     }
+//   }
+// }
+// for (var k = 0; k < n; k++) {
+//   console.log(umur[k]);
+// }
+
+
+// var person = ["a","b","b","a"];
+// var n = person.length;
+
+// var wordPerson = [];
+
+// for (var i = n - 1; i >= 0; i--) {
+//   wordPerson.push(person[i]);
+// }
+// console.log(wordPerson.join(''));
+
+
+// function reverseString(str) {
+// var currentString = str;
+// var newString = '';
+// for (let i = str.length - 1; i >= 0; i--) {
+//   newString = newString + currentString[i];
+// }
+// return newString;
+// }
+// console.log(reverseString('abba'));
+
+
+
+// [1,1,1]=1
+// [2,3,1,4]=6
+//ambil tiga angka dari array
+//kalo ada angka duplikat maka ambil satu saja
+//maksimum perkalian hanya 3 angka
+//jika input kurang dari 3 angka maka error
+
+function ambilTigaAngka(array) {
+  if (array.length < 3) {
+    console.log("Error: Input kurang dari 3 angka");
+    return;
+  }
+
+  //duplikat
+  var uniqueNumbers = [];
+  for (var i = 0; i < array.length; i++) {
+    if (uniqueNumbers.indexOf(array[i]) === -1) {
+      uniqueNumbers.push(array[i]);
+    }
+  }
+
+  // tiga angka pertama
+  var tigaAngka = uniqueNumbers.slice(0, 3);
+
+  // maksimum perkalian tiga angka
+  var hasilPerkalian = tigaAngka[0] * tigaAngka[1] * tigaAngka[2];
+
+  console.log("Tiga angka unik pertama: " + tigaAngka);
+  console.log("Maksimum perkalian: " + hasilPerkalian);
+}
+
+var angkaArray = [2,3,9,3];
+ambilTigaAngka(angkaArray);
+
+</script>
+
+</body>
+</html>
